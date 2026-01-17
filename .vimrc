@@ -1,102 +1,59 @@
+" Force English locale
 let $LANG = 'en_US'
 
-" Plug {{{
-set nocompatible    "be iMproved, required 
-filetype off        "required
-
-"call plug#begin()
-
-"call plug#end()
-
+" Disable Vi compatibility
+set nocompatible
 filetype indent plugin on
-" }}}
 
-" General {{{
 " Encoding
-set encoding=utf-8 nobomb           " Vim inside encoding (buffer, register...)
-set fileencoding=utf-8 nobomb       " New file encoding 
-" Auto file encoding detection order
-set fileencodings=ucs-bom,utf-8,gb2312,gbk,gb18030,big5,euc-jp,euc-kr,latin1 
+set encoding=utf-8 nobomb              " Internal encoding
+set fileencoding=utf-8 nobomb          " New file encoding
+set fileencodings=ucs-bom,utf-8,gb2312,gbk,gb18030,big5,euc-jp,euc-kr,latin1
 
-"Folding
-set nofoldenable
-set foldnestmax=3
-set foldmethod=syntax
+" Indentation
+set autoindent                         " Copy indent from current line
+set smartindent                        " Smart autoindenting on new line
+set tabstop=4                          " Tab width
+set softtabstop=4                      " Spaces for tab in insert mode
+set shiftwidth=4                       " Spaces for autoindent
+set expandtab                          " Convert tabs to spaces
 
-set nobackup
+" Editing
+set nobackup                           " Disable backup files
+set wrap                               " Wrap long lines
+set textwidth=79                       " Line width limit
+set backspace=indent,eol,start         " Allow backspace over everything
 
-set autochdir
+" Search
+set ignorecase                         " Case insensitive search
+set smartcase                          " Case sensitive if capital letter present
+set incsearch                          " Show matches while typing
+set hlsearch                           " Highlight search results
+set gdefault                           " Global substitution by default
 
-set autoindent
-set smartindent
-" Tabs, spaces, wrapping
-set tabstop=4                   " the width of a tab is set to 4.
-                                " still it is a \t. it is just that
-                                " vim will interpret it to be having
-                                " a width of 4.
-set softtabstop=4               " sets the number of columns for a tab.
-set shiftwidth=4                " indents will have a width of 4.
-set expandtab                   " expand tabs to spaces.
+" UI
+syntax on                              " Enable syntax highlighting
+set ruler                              " Show cursor position
+set laststatus=2                       " Always show status line
+set nonumber                           " Hide line numbers
+set listchars=tab:▸\ ,trail:·,eol:¬,nbsp:_  " Whitespace characters
+set splitbelow                         " Open horizontal splits below
+set splitright                         " Open vertical splits to the right
 
-set wrap " wrap the long line to next line
-set textwidth=79
+" Completion
+set wildmenu                           " Command-line completion menu
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip    " Ignore patterns
 
-set backspace=indent,eol,start
-
-"set mouse-=a                               " no mouse
-set ignorecase                              " Case insensitive search
-set incsearch                               " show match when typing
-set smartcase                               " be case sensitive when input has a captial letter
-set gdefault                                " all matches in a line are substituted
-
-set wildmenu                                " Show list instead of just completing
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip    " Ignore file extentions
-
-
-" vimrc group
+" Auto commands
 augroup song_rc
-    "clean existed autocmds
     autocmd!
+    autocmd VimResized * :wincmd =     " Auto-resize splits on window resize
 augroup END
 
-autocmd song_rc VimResized * :wincmd =              " Resize splits when the window is resized
-set shell=/bin/zsh
+" File type detection
+au BufNewFile,BufRead Podfile set ft=ruby
 
-" ui
-syntax on            " enable syntax hightlighting
-set ruler
-
-set laststatus=2
-set listchars=tab:▸\ ,trail:·,eol:¬,nbsp:_  " show “invisible” characters
-"set nolist                                    " show listchars
-set hlsearch                                " Highlight search terms
-set nonumber
-
-set splitbelow
-set splitright
-
-" }}}
-
-" File type {{{
-    " fastlane {{{
-        au BufNewFile,BufRead Podfile set ft=ruby
-        au BufNewFile,BufRead Appfile set ft=ruby
-        au BufNewFile,BufRead Fastfile set ft=ruby
-        au BufNewFile,BufRead Deliverfile set ft=ruby
-        au BufNewFile,BufRead Pluginfile set ft=ruby
-    "}}}
-    
-" }}}
-
-
-" Key bindings {{{
-let mapleader = ' '
-
-" clear search highlights
-nmap <Esc> :nohl<CR>
-
-" Toggle `set list` to show invisible chars
-nmap <leader>l :set list!<CR>
-"}}}
-
-let g:fzf_preview_window = []
+" Key bindings
+let mapleader = ' '                    " Space as leader key
+nmap <Esc> :nohl<CR>                   " Clear search highlights
+nmap <leader>l :set list!<CR>          " Toggle invisible characters
