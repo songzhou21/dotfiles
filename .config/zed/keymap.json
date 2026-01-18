@@ -1,0 +1,26 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Onboarding",
+    "bindings": {
+      "cmd-0": null,
+    },
+  },
+  {
+    "context": "Welcome",
+    "bindings": {
+      "cmd-0": null,
+    },
+  },
+  {
+    "bindings": {
+      "cmd-0": "workspace::ToggleLeftDock",
+    },
+  },
+]
