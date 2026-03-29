@@ -1,2 +1,5 @@
 gui:
   language: 'en'
+  theme:
+    selectedLineBgColor:
+      - '#474e5d'
