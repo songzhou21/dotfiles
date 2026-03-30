@@ -3,3 +3,7 @@ gui:
   theme:
     selectedLineBgColor:
       - '#474e5d'
+    cherryPickedCommitBgColor:
+      - '#494d64'
+    cherryPickedCommitFgColor:
+      - '#f5a97f'
