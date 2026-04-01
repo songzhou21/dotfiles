@@ -14,7 +14,33 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("plugins")
+require("lazy").setup("plugins", {
+  ui = {
+    icons = {
+      cmd = "",
+      config = "",
+      event = "",
+      ft = "",
+      init = "",
+      keys = "",
+      plugin = "",
+      runtime = "",
+      require = "",
+      source = "",
+      start = "",
+      task = "",
+      lazy = "",
+    },
+  },
+})
 
--- init.lua
 require("config.lsp")
+
+vim.opt.wildmenu = true
+vim.opt.wildmode = "list:longest,list:full" -- don't insert, show options
+
+-- line numbers
+vim.opt.nu = true
+
+-- textwrap at 80 cols
+vim.opt.tw = 80
