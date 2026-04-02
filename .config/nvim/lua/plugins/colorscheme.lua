@@ -44,11 +44,4 @@ return {
     "vim-airline/vim-airline-themes",
     lazy = true,
   },
-  {
-    "lewis6991/gitsigns.nvim",
-    event = { "BufReadPre", "BufNewFile" },
-    config = function()
-      require("gitsigns").setup()
-    end,
-  },
 }
