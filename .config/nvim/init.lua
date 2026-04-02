@@ -91,3 +91,6 @@ vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
 
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { silent = true })
 vim.keymap.set("n", "<leader>l", "<cmd>set list!<CR>", { silent = true })
+--buffer
+vim.keymap.set("n", "]b", "<cmd>bnext<CR>", { silent = true })
+vim.keymap.set("n", "[b", "<cmd>bprevious<CR>", { silent = true })
