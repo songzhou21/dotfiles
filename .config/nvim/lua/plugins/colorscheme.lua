@@ -1,14 +1,13 @@
 return {
   {
-    "sonph/onehalf",
+    "navarasu/onedark.nvim",
     priority = 1000,
     config = function()
-      local onehalf_vim = require("lazy.core.config").plugins["onehalf"].dir .. "/vim"
-
       vim.opt.termguicolors = true
-      vim.opt.rtp:append(onehalf_vim)
-      vim.cmd.colorscheme("onehalfdark")
-
+      require("onedark").setup({
+        style = "dark",
+      })
+      require("onedark").load()
     end,
   },
   {
@@ -25,9 +24,9 @@ return {
       airline_symbols.notexists = " ??"
       vim.g.airline_symbols = airline_symbols
 
-      vim.g.airline_powerline_fonts = 1
+      vim.g.airline_powerline_fonts = 0
       vim.g.airline_right_sep = ""
-      vim.g.airline_theme = "onehalfdark"
+      vim.g.airline_theme = "onedark"
       vim.g.airline_section_c_only_filename = 1
       vim.g.airline_section_y = ""
       vim.g.airline_section_z = "%l:%c"
