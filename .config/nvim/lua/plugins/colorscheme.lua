@@ -35,10 +35,7 @@ return {
       vim.g["airline#extensions#branch#enabled"] = 1
       vim.g["airline#extensions#nvimlsp#enabled"] = 1
       vim.g["airline#extensions#tabline#enabled"] = 1
-      -- `:t` means "tail": show only the last path segment (the filename itself).
-      vim.g["airline#extensions#tabline#fnamemod"] = ":t"
-      -- Keep unique filenames short, but add just enough parent path when names collide.
-      vim.g["airline#extensions#tabline#formatter"] = "unique_tail_improved"
+      vim.g["airline#extensions#tabline#formatter"] = "unique_tail"
     end,
   },
   {
