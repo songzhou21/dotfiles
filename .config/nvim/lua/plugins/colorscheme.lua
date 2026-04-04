@@ -25,15 +25,20 @@ return {
       vim.g.airline_symbols = airline_symbols
 
       vim.g.airline_powerline_fonts = 0
-      vim.g.airline_right_sep = ""
       vim.g.airline_theme = "onedark"
+      -- Keep section C compact by showing only the current filename, not the full path.
       vim.g.airline_section_c_only_filename = 1
+      -- Hide section Y to keep the right side minimal (it normally shows encoding/line-ending info).
       vim.g.airline_section_y = ""
+      -- Show only the cursor position on the far right: line:column.
       vim.g.airline_section_z = "%l:%c"
       vim.g["airline#extensions#branch#enabled"] = 1
       vim.g["airline#extensions#nvimlsp#enabled"] = 1
       vim.g["airline#extensions#tabline#enabled"] = 1
-      vim.g["airline#extensions#tabline#formatter"] = "unique_tail"
+      -- `:t` means "tail": show only the last path segment (the filename itself).
+      vim.g["airline#extensions#tabline#fnamemod"] = ":t"
+      -- Keep unique filenames short, but add just enough parent path when names collide.
+      vim.g["airline#extensions#tabline#formatter"] = "unique_tail_improved"
     end,
   },
   {
