@@ -4,6 +4,7 @@
   "cmp-path": { "branch": "main", "commit": "c642487086dbd9a93160e1679a1327be111cbc25" },
   "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
   "nvim-cmp": { "branch": "main", "commit": "a1d504892f2bc56c2e79b65c6faded2fd21f3eca" },
+  "nvim-tree.lua": { "branch": "master", "commit": "e16cd38962bc40c22a51ee004aa4f43726d74a16" },
   "onedark.nvim": { "branch": "master", "commit": "213c23ae45a04797572242568d5d51937181792d" },
   "vim-airline": { "branch": "master", "commit": "512456e425409ec58627bd839fbb85d449d8cbc1" },
   "vim-airline-themes": { "branch": "master", "commit": "77aab8c6cf7179ddb8a05741da7e358a86b2c3ab" },

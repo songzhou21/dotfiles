@@ -38,12 +38,4 @@ return {
       vim.g["airline#extensions#tabline#formatter"] = "unique_tail"
     end,
   },
-  {
-    "tpope/vim-fugitive",
-    lazy = true,
-  },
-  {
-    "vim-airline/vim-airline-themes",
-    lazy = true,
-  },
 }
