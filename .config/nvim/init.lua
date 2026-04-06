@@ -1,10 +1,6 @@
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
--- Disable netrw at startup so nvim-tree can take over directory browsing.
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
+-- ============================================================
+-- Plugin Manager: lazy.nvim
+-- ============================================================
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
     local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -21,29 +17,90 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("plugins", {
-  ui = {
-    icons = {
-      cmd = "",
-      config = "",
-      event = "",
-      ft = "",
-      init = "",
-      keys = "",
-      plugin = "",
-      runtime = "",
-      require = "",
-      source = "",
-      start = "",
-      task = "",
-      lazy = "",
+-- ============================================================
+-- Plugins
+-- ============================================================
+require("lazy").setup({
+  -- Theme
+  {
+    "navarasu/onedark.nvim",
+    priority = 1000,
+    config = function()
+      vim.opt.termguicolors = true
+      require("onedark").setup({
+        style = "dark",
+      })
+      require("onedark").load()
+    end,
+  },
+  -- Finder
+  {
+    "ibhagwan/fzf-lua",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {
+      ["--cycle"] = true,
     },
   },
+  -- Completion
+  {
+    "hrsh7th/nvim-cmp",
+    version = false,
+    event = "InsertEnter",
+    dependencies = {
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-buffer",
+    },
+    config = function()
+      local cmp = require("cmp")
+
+      cmp.setup({
+        sources = cmp.config.sources({
+          { name = "nvim_lsp" },
+          { name = "buffer" },
+          { name = "path" },
+        }),
+        mapping = cmp.mapping.preset.insert({
+          ["<CR>"] = cmp.mapping.confirm({ select = true }),
+          ["<Tab>"] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+              cmp.select_next_item()
+            else
+              fallback()
+            end
+          end, { "i", "s" }),
+          ["<S-Tab>"] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+              cmp.select_prev_item()
+            else
+              fallback()
+            end
+          end, { "i", "s" }),
+        }),
+      })
+    end,
+  },
+  { "hrsh7th/cmp-nvim-lsp", lazy = true },
+  { "hrsh7th/cmp-path", lazy = true },
+  { "hrsh7th/cmp-buffer", lazy = true },
 })
 
+-- ============================================================
+-- Plugin Keymaps
+-- ============================================================
+local fzf = require("fzf-lua")
+if fzf then
+  vim.keymap.set("n", "<C-p>", fzf.files, { desc = "Fzf Files" })
+end
+
+-- ============================================================
+-- LSP
+-- ============================================================
 require("config.lsp")
 
-
+-- ============================================================
+-- Editor Options
+-- ============================================================
 local opt = vim.opt
 
 opt.fileencoding = "utf-8"
@@ -58,7 +115,6 @@ opt.expandtab = true
 
 opt.backup = false
 opt.wrap = true
-opt.textwidth = 79
 opt.backspace = { "indent", "eol", "start" }
 
 opt.ignorecase = true
@@ -67,7 +123,11 @@ opt.incsearch = true
 opt.hlsearch = true
 opt.gdefault = true
 
+opt.showmode = true
+opt.showcmd = true
 opt.ruler = true
+opt.number = true
+opt.cursorline = true
 opt.laststatus = 2
 opt.listchars = { tab = "» ", trail = "·", eol = "↴", nbsp = "␣" }
 opt.splitbelow = true
@@ -75,10 +135,10 @@ opt.splitright = true
 
 opt.wildmenu = true
 opt.wildmode = "list:longest,list:full"
-opt.wildignore:append({ "*/tmp/*", "*.so", "*.swp", "*.zip" })
 
-
-
+-- ============================================================
+-- Autocmds
+-- ============================================================
 vim.api.nvim_create_autocmd("VimResized", {
   -- Keep split sizes balanced after the terminal window changes size.
   callback = function()
@@ -93,7 +153,18 @@ vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
   end,
 })
 
+-- ============================================================
+-- Leader
+-- ============================================================
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+
+-- ============================================================
+-- Keymaps
+-- ============================================================
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>ve", "<cmd>e $MYVIMRC<CR>", { silent = true })
 vim.keymap.set("n", "<leader>l", "<cmd>set list!<CR>", { silent = true })
 --buffer
 vim.keymap.set("n", "]b", "<cmd>bnext<CR>", { silent = true })
