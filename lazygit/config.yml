@@ -7,3 +7,7 @@ gui:
       - '#494d64'
     cherryPickedCommitFgColor:
       - '#f5a97f'
+git:
+  pagers:
+    - colorArg: always
+      pager: delta --paging=never
