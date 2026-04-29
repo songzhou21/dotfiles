@@ -5,4 +5,3 @@ font-feature = -liga
 font-feature = -calt
 theme = One Half Dark
 unfocused-split-opacity = 1
-macos-option-as-alt = left

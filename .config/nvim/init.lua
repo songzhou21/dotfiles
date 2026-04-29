@@ -39,6 +39,11 @@ require("lazy").setup({
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {
       ["--cycle"] = true,
+      winopts = {
+        preview = {
+          hidden = true,
+        },
+      },
     },
   },
   -- Completion
