@@ -95,7 +95,16 @@ require("lazy").setup({
 -- ============================================================
 local fzf = require("fzf-lua")
 if fzf then
+  fzf.setup({
+    defaults = {
+      formatter = "path.filename_first",
+    },
+    winopts = {
+      preview = { hidden = "hidden" },
+    },
+  })
   vim.keymap.set("n", "<C-p>", fzf.files, { desc = "Fzf Files" })
+  vim.keymap.set("n", "q:", "<cmd>FzfLua command_history<cr>", { desc = "Fzf Command History" })
 end
 
 -- ============================================================
