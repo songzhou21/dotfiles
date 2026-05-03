@@ -1,12 +1,13 @@
 -- lsp/sourcekit.lua
 return {
-  cmd = { 'sourcekit-lsp' },
+  cmd = { 'xcrun', 'sourcekit-lsp' },
   filetypes = { 'swift' },
   root_markers = {
-    '.git',
+    'buildServer.json',
     'compile_commands.json',
     '.sourcekit-lsp',
     'Package.swift',
+    '.git',
   },
   get_language_id = function(_, ftype)
     return ftype
