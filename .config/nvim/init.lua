@@ -41,7 +41,7 @@ require("lazy").setup({
       ["--cycle"] = true,
       winopts = {
         preview = {
-          hidden = true,
+          hidden = false,
         },
       },
     },
@@ -100,10 +100,11 @@ if fzf then
       formatter = "path.filename_first",
     },
     winopts = {
-      preview = { hidden = "hidden" },
+      preview = { hidden = false },
     },
   })
   vim.keymap.set("n", "<C-p>", fzf.files, { desc = "Fzf Files" })
+  vim.keymap.set("n", "gr", fzf.lsp_references, { desc = "Fzf LSP References" })
   vim.keymap.set("n", "q:", "<cmd>FzfLua command_history<cr>", { desc = "Fzf Command History" })
 end
 
