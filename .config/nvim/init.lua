@@ -22,17 +22,7 @@ vim.opt.rtp:prepend(lazypath)
 -- ============================================================
 require("lazy").setup({
   -- Theme
-  {
-    "navarasu/onedark.nvim",
-    priority = 1000,
-    config = function()
-      vim.opt.termguicolors = true
-      require("onedark").setup({
-        style = "dark",
-      })
-      require("onedark").load()
-    end,
-  },
+  { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true},
   -- Finder
   {
     "ibhagwan/fzf-lua",
@@ -117,6 +107,9 @@ require("config.lsp")
 -- Editor Options
 -- ============================================================
 local opt = vim.opt
+
+opt.background = "dark"
+vim.cmd([[colorscheme gruvbox]])
 
 opt.fileencoding = "utf-8"
 opt.fileencodings = { "ucs-bom", "utf-8", "gb2312", "gbk", "gb18030", "big5", "euc-jp", "euc-kr", "latin1" }

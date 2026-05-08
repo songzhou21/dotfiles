@@ -1,7 +1,8 @@
+config-file = ?auto/theme.ghostty
+
 font-family = "JetBrains Mono NL"
 font-family = "PingFang SC"
 font-size = 16
 font-feature = -liga
 font-feature = -calt
-theme = One Half Dark
 unfocused-split-opacity = 1
