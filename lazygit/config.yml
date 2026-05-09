@@ -1,12 +1,18 @@
 gui:
   language: 'en'
   theme:
+    # dark
+    # ======
+    #selectedLineBgColor:
+    #  - '#474e5d'
+    #cherryPickedCommitBgColor:
+    #  - '#494d64'
+    #cherryPickedCommitFgColor:
+    #  - '#f5a97f'
+    #  light
+    #  ======
     selectedLineBgColor:
-      - '#474e5d'
-    cherryPickedCommitBgColor:
-      - '#494d64'
-    cherryPickedCommitFgColor:
-      - '#f5a97f'
+      - '#e5e5e5'
 git:
   pagers:
     - colorArg: always
