@@ -22,7 +22,7 @@ vim.opt.rtp:prepend(lazypath)
 -- ============================================================
 require("lazy").setup({
   -- Theme
-  { 'kepano/flexoki-neovim', name = 'flexoki' },
+  { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true},
   -- Finder
   {
     "ibhagwan/fzf-lua",
@@ -108,7 +108,8 @@ require("config.lsp")
 -- ============================================================
 local opt = vim.opt
 
-vim.cmd('colorscheme flexoki-light')
+vim.o.background = "dark" -- or "light" for light mode
+vim.cmd([[colorscheme gruvbox]])
 
 
 opt.fileencoding = "utf-8"

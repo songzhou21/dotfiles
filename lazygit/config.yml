@@ -3,17 +3,18 @@ gui:
   theme:
     # dark
     # ======
-    #selectedLineBgColor:
-    #  - '#474e5d'
-    #cherryPickedCommitBgColor:
-    #  - '#494d64'
-    #cherryPickedCommitFgColor:
-    #  - '#f5a97f'
+    selectedLineBgColor:
+      - '#474e5d'
+    cherryPickedCommitBgColor:
+      - '#494d64'
+    cherryPickedCommitFgColor:
+      - '#f5a97f'
     #  light
     #  ======
-    selectedLineBgColor:
-      - '#e5e5e5'
+    #selectedLineBgColor:
+    #  - '#e5e5e5'
 git:
   pagers:
     - colorArg: always
-      pager: delta --light --paging=never
+      #pager: delta --light --paging=never
+      pager: delta --paging=never
