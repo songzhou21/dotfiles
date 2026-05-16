@@ -108,9 +108,8 @@ require("config.lsp")
 -- ============================================================
 local opt = vim.opt
 
-vim.o.background = "dark" -- or "light" for light mode
+--vim.o.background = "dark" -- or "light" for light mode
 vim.cmd([[colorscheme gruvbox]])
-
 
 opt.fileencoding = "utf-8"
 opt.fileencodings = { "ucs-bom", "utf-8", "gb2312", "gbk", "gb18030", "big5", "euc-jp", "euc-kr", "latin1" }
