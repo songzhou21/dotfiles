@@ -86,6 +86,30 @@ require("lazy").setup({
   { "hrsh7th/cmp-nvim-lsp", lazy = true },
   { "hrsh7th/cmp-path", lazy = true },
   { "hrsh7th/cmp-buffer", lazy = true },
+  -- UFO Fold
+  {
+    "kevinhwang91/nvim-ufo",
+    dependencies = "kevinhwang91/promise-async",
+    config = function()
+      -- 1. 折叠相关编辑器配置
+      vim.o.foldcolumn = "1"
+      vim.o.foldlevel = 99
+      vim.o.foldlevelstart = 99
+      vim.o.foldenable = true
+
+      -- 2. 快捷键配置
+      vim.keymap.set("n", "zR", require("ufo").openAllFolds, { desc = "Open all folds" })
+      vim.keymap.set("n", "zM", require("ufo").closeAllFolds, { desc = "Close all folds" })
+
+      -- 3. 启动 ufo
+      require("ufo").setup({
+        open_fold_hl_timeout = 0,
+        provider_selector = function(bufnr, filetype, bufnr)
+          return { "treesitter", "indent" }
+        end,
+      })
+    end,
+  },
 })
 
 -- ============================================================
