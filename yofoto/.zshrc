@@ -62,6 +62,8 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # ShareTalk Build Tools
 export PATH="/Users/songzhou/Developer/yofoto_ai/build:$PATH"
 
+export CLAUDE_CODE_NO_FLICKER=1
+
 # cliproxy
 export ANTHROPIC_BASE_URL=http://127.0.0.1:8317
 export ANTHROPIC_AUTH_TOKEN=google-key
@@ -70,11 +72,11 @@ export ANTHROPIC_DEFAULT_SONNET_MODEL=gemini-3-flash
 export ANTHROPIC_DEFAULT_HAIKU_MODEL=gemini-3-flash
 
 # kiro
-#export ANTHROPIC_BASE_URL=http://127.0.0.1:8000
-#export ANTHROPIC_AUTH_TOKEN=my_password
-#export ANTHROPIC_DEFAULT_OPUS_MODEL=glm-5
-#export ANTHROPIC_DEFAULT_SONNET_MODEL=glm-5
-#export ANTHROPIC_DEFAULT_HAIKU_MODEL=glm-5
+export ANTHROPIC_BASE_URL=http://127.0.0.1:8000
+export ANTHROPIC_AUTH_TOKEN=my_password
+export ANTHROPIC_DEFAULT_OPUS_MODEL=glm-5
+export ANTHROPIC_DEFAULT_SONNET_MODEL=glm-5
+export ANTHROPIC_DEFAULT_HAIKU_MODEL=glm-5
 
 
 # Kiro CLI post block. Keep at the bottom of this file.
