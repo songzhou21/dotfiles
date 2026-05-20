@@ -38,7 +38,7 @@ PATH="$HOME/.local/bin/:$PATH"
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7891
+#export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7891
 
 # pnpm
 export PNPM_HOME="/Users/songzhou/Library/pnpm"
@@ -59,18 +59,22 @@ export PATH="$HOME/.npm-global/bin:$PATH"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 
-export CLAUDE_CODE_NO_FLICKER=1
-
 # ShareTalk Build Tools
 export PATH="/Users/songzhou/Developer/yofoto_ai/build:$PATH"
 
+# cliproxy
 export ANTHROPIC_BASE_URL=http://127.0.0.1:8317
 export ANTHROPIC_AUTH_TOKEN=google-key
-export ANTHROPIC_DEFAULT_OPUS_MODEL=gemini-3.1-pro-high
+export ANTHROPIC_DEFAULT_OPUS_MODEL=gemini-3-flash
 export ANTHROPIC_DEFAULT_SONNET_MODEL=gemini-3-flash
 export ANTHROPIC_DEFAULT_HAIKU_MODEL=gemini-3-flash
 
-
+# kiro
+#export ANTHROPIC_BASE_URL=http://127.0.0.1:8000
+#export ANTHROPIC_AUTH_TOKEN=my_password
+#export ANTHROPIC_DEFAULT_OPUS_MODEL=glm-5
+#export ANTHROPIC_DEFAULT_SONNET_MODEL=glm-5
+#export ANTHROPIC_DEFAULT_HAIKU_MODEL=glm-5
 
 
 # Kiro CLI post block. Keep at the bottom of this file.
@@ -82,3 +86,13 @@ export ANTHROPIC_DEFAULT_HAIKU_MODEL=gemini-3-flash
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/songzhou/.antigravity/antigravity/bin:$PATH"
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/songzhou/.local/bin:$PATH"
+
+# Added by Antigravity IDE
+export PATH="/Users/songzhou/.antigravity-ide/antigravity-ide/bin:$PATH"
