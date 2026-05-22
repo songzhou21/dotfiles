@@ -6,10 +6,9 @@ font-size = 16
 font-feature = -liga
 font-feature = -calt
 unfocused-split-opacity = 1.0
-macos-window-floating = false
 
 
-#macos-option-as-alt = true
+macos-option-as-alt = true
 
 #color
 #split-divider-color = #282c34
