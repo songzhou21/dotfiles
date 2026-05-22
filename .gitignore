@@ -4,3 +4,4 @@
 *.mdb
 lazygit/state.yml
 /.config/nvim/nvim.log
+.antigravitycli
