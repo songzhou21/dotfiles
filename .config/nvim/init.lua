@@ -22,15 +22,21 @@ vim.opt.rtp:prepend(lazypath)
 -- ============================================================
 require("lazy").setup({
   -- Theme
-  --{ "ellisonleao/gruvbox.nvim", priority = 1000 , config = true},
   {
-    "kepano/flexoki-neovim",
-    name = "flexoki",
+    "ellisonleao/gruvbox.nvim",
     priority = 1000,
     config = function()
-      vim.cmd("colorscheme flexoki-light")
-    end
+      vim.cmd("colorscheme gruvbox")
+    end,
   },
+  --{
+  --  "kepano/flexoki-neovim",
+  --  name = "flexoki",
+  --  priority = 1000,
+  --  config = function()
+  --    vim.cmd("colorscheme flexoki-light")
+  --  end
+  --},
   -- Finder
   {
     "ibhagwan/fzf-lua",
