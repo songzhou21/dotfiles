@@ -30,7 +30,7 @@ PATH="$HOME/.local/bin/:$PATH"
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-#export https_proxy=http://127.0.0.1:7893 http_proxy=http://127.0.0.1:7893 all_proxy=socks5://127.0.0.1:7893
+export https_proxy=http://127.0.0.1:7893 http_proxy=http://127.0.0.1:7893 all_proxy=socks5://127.0.0.1:7893
 
 # pnpm
 export PNPM_HOME="/Users/songzhou/Library/pnpm"
