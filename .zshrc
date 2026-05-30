@@ -53,8 +53,17 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 export CLAUDE_CODE_NO_FLICKER=1
 
+
+#export ANTHROPIC_BASE_URL=https://anyrouter.top
+#export CLAUDE_CODE_ATTRIBUTION_HEADER=0
+#export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1
+#export ANTHROPIC_AUTH_TOKEN=sk-XkcaELD7lCgcHP8n1L63vTXRrLapaeVJRPcFgyd3FVPVOHGJ
+
 export ANTHROPIC_BASE_URL=http://127.0.0.1:8317
 export ANTHROPIC_AUTH_TOKEN=google-key
-export ANTHROPIC_DEFAULT_OPUS_MODEL=gemini-3.1-pro-high
-export ANTHROPIC_DEFAULT_SONNET_MODEL=gemini-3-flash
-export ANTHROPIC_DEFAULT_HAIKU_MODEL=gemini-3-flash
+cli_proxy_model=glm-5.1
+export ANTHROPIC_DEFAULT_OPUS_MODEL=$cli_proxy_model
+export ANTHROPIC_DEFAULT_SONNET_MODEL=$cli_proxy_model
+export ANTHROPIC_DEFAULT_HAIKU_MODEL=$cli_proxy_model
+
+
