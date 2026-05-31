@@ -5,8 +5,8 @@
       {
         "id": "1",
         "type": "model",
-        "color": "white",
-        "rawValue": true
+        "rawValue": true,
+        "color": "brightCyan"
       },
       {
         "id": "0b85e560-e9de-4f27-837b-4b920dee53ed",
@@ -16,8 +16,8 @@
       {
         "id": "3",
         "type": "context-length",
-        "color": "white",
-        "rawValue": true
+        "rawValue": false,
+        "color": ""
       },
       {
         "id": "716471ec-82f7-4348-a704-56bcd1871637",
@@ -35,21 +35,7 @@
       },
       {
         "id": "7",
-        "type": "git-changes",
-        "color": "yellow"
-      },
-      {
-        "id": "ba692253-7f06-4d08-b580-c2a2d6b2b578",
-        "type": "separator"
-      },
-      {
-        "id": "330cb34a-2836-48f8-bee2-0eec9eb9369e",
-        "type": "current-working-dir",
-        "metadata": {
-          "abbreviateHome": "true"
-        },
-        "rawValue": true,
-        "color": ""
+        "type": "git-changes"
       }
     ],
     [],
