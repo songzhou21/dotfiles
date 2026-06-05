@@ -5,19 +5,38 @@
       {
         "id": "1",
         "type": "model",
-        "color": "white",
+        "color": "brightCyan",
         "rawValue": true
       },
       {
         "id": "0b85e560-e9de-4f27-837b-4b920dee53ed",
         "type": "separator",
-        "character": "-"
+        "character": "|"
       },
       {
         "id": "3",
         "type": "context-length",
-        "color": "white",
-        "rawValue": true
+        "color": "",
+        "rawValue": false
+      },
+      {
+        "id": "3608675e-c527-4d09-a371-20a3839dafac",
+        "type": "separator",
+        "character": " "
+      },
+      {
+        "id": "c4630209-5199-4846-8d26-34ef051f67e0",
+        "type": "input-speed",
+        "rawValue": false
+      },
+      {
+        "id": "399608b2-ab63-45ae-83bb-18fb3213d25e",
+        "type": "separator",
+        "character": ","
+      },
+      {
+        "id": "30a56286-2946-4540-9350-6d2c8fa01693",
+        "type": "output-speed"
       },
       {
         "id": "716471ec-82f7-4348-a704-56bcd1871637",
@@ -35,21 +54,7 @@
       },
       {
         "id": "7",
-        "type": "git-changes",
-        "color": "yellow"
-      },
-      {
-        "id": "ba692253-7f06-4d08-b580-c2a2d6b2b578",
-        "type": "separator"
-      },
-      {
-        "id": "330cb34a-2836-48f8-bee2-0eec9eb9369e",
-        "type": "current-working-dir",
-        "metadata": {
-          "abbreviateHome": "true"
-        },
-        "rawValue": true,
-        "color": ""
+        "type": "git-changes"
       }
     ],
     [],
@@ -74,5 +79,9 @@
     "endCaps": [],
     "autoAlign": false,
     "continueThemeAcrossLines": false
+  },
+  "installation": {
+    "method": "pinned",
+    "installedVersion": "2.2.19"
   }
 }

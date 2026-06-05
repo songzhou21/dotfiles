@@ -7,7 +7,6 @@ font-feature = -liga
 font-feature = -calt
 unfocused-split-opacity = 1.0
 
-
 macos-option-as-alt = true
 
 #color
@@ -18,3 +17,5 @@ keybind = alt+right=goto_split:right
 keybind = alt+down=goto_split:down
 keybind = alt+up=goto_split:up
 
+tab-inherit-working-directory = true
+split-inherit-working-directory = true
