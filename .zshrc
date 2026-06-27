@@ -4,7 +4,6 @@ export CLICOLOR=1
 fpath+=$HOME/.zsh/pure
 autoload -U promptinit; promptinit
 prompt pure
-
 zstyle :prompt:pure:git:stash show yes
 
 PURE_GIT_PULL=0
@@ -32,14 +31,6 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #export https_proxy=http://127.0.0.1:7893 http_proxy=http://127.0.0.1:7893 all_proxy=socks5://127.0.0.1:7893
 
-# pnpm
-export PNPM_HOME="/Users/songzhou/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # opencode
@@ -54,16 +45,10 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export CLAUDE_CODE_NO_FLICKER=1
 
 
-#export ANTHROPIC_BASE_URL=https://anyrouter.top
-#export CLAUDE_CODE_ATTRIBUTION_HEADER=0
-#export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1
-#export ANTHROPIC_AUTH_TOKEN=sk-XkcaELD7lCgcHP8n1L63vTXRrLapaeVJRPcFgyd3FVPVOHGJ
-
-export ANTHROPIC_BASE_URL=http://127.0.0.1:8317
-export ANTHROPIC_AUTH_TOKEN=google-key
-cli_proxy_model=glm-5.1
-export ANTHROPIC_DEFAULT_OPUS_MODEL=$cli_proxy_model
-export ANTHROPIC_DEFAULT_SONNET_MODEL=$cli_proxy_model
-export ANTHROPIC_DEFAULT_HAIKU_MODEL=$cli_proxy_model
-
-
+# pnpm
+export PNPM_HOME="/Users/songzhou/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+# pnpm end
