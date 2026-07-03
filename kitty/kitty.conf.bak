@@ -2991,7 +2991,7 @@
 
 
 # BEGIN_KITTY_THEME
-# VSCode_Dark
+# Xcodedark
 include current-theme.conf
 # END_KITTY_THEME
 
@@ -3018,12 +3018,6 @@ map shift+cmd+d launch --location=hsplit --cwd=current
 map cmd+] next_window
 map cmd+[ previous_window
 
-# Move the active window in splits layout
-map shift+up move_window up
-map shift+down move_window down
-map shift+left move_window left
-map shift+right move_window right
-
 # Inherit cwd when opening new tab/window/OS window
 map cmd+t           new_tab_with_cwd
 map cmd+enter       new_window_with_cwd
@@ -3031,5 +3025,5 @@ map cmd+n           new_os_window_with_cwd
 map kitty_mod+t     new_tab_with_cwd
 map kitty_mod+enter new_window_with_cwd
 map kitty_mod+n     new_os_window_with_cwd
- macos_titlebar_color dark
+# macos_titlebar_color dark
 

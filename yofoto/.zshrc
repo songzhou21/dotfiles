@@ -74,12 +74,10 @@ export CLAUDE_CODE_NO_FLICKER=1
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# Added by Antigravity
-export PATH="/Users/songzhou/.antigravity/antigravity/bin:$PATH"
 
-
-# Added by Antigravity CLI installer
-export PATH="/Users/songzhou/.local/bin:$PATH"
-
-# Added by Antigravity IDE
-export PATH="/Users/songzhou/.antigravity-ide/antigravity-ide/bin:$PATH"
+# kiro
+export ANTHROPIC_BASE_URL=http://127.0.0.1:8000
+export ANTHROPIC_AUTH_TOKEN=my-super-secret-password-123
+export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-8
+export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-5
+export ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-haiku-4-5
