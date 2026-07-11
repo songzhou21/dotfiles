@@ -5,8 +5,19 @@
       {
         "id": "1",
         "type": "model",
-        "color": "brightCyan",
+        "color": "",
         "rawValue": true
+      },
+      {
+        "id": "84f0b721-c40d-4f1f-9ce1-78b899f02fe9",
+        "type": "separator",
+        "character": " "
+      },
+      {
+        "id": "b269fd21-abf7-4114-8b1a-628a17d8fc0e",
+        "type": "thinking-effort",
+        "rawValue": true,
+        "color": ""
       },
       {
         "id": "0b85e560-e9de-4f27-837b-4b920dee53ed",
@@ -20,26 +31,7 @@
         "rawValue": false
       },
       {
-        "id": "3608675e-c527-4d09-a371-20a3839dafac",
-        "type": "separator",
-        "character": " "
-      },
-      {
-        "id": "c4630209-5199-4846-8d26-34ef051f67e0",
-        "type": "input-speed",
-        "rawValue": false
-      },
-      {
-        "id": "399608b2-ab63-45ae-83bb-18fb3213d25e",
-        "type": "separator",
-        "character": ","
-      },
-      {
-        "id": "30a56286-2946-4540-9350-6d2c8fa01693",
-        "type": "output-speed"
-      },
-      {
-        "id": "716471ec-82f7-4348-a704-56bcd1871637",
+        "id": "2f379def-9b51-4989-8380-3eac01b84f26",
         "type": "separator"
       },
       {
@@ -82,6 +74,6 @@
   },
   "installation": {
     "method": "pinned",
-    "installedVersion": "2.2.19"
+    "installedVersion": "2.2.23"
   }
 }
