@@ -42,9 +42,6 @@ export PATH="$HOME/.npm-global/bin:$PATH"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 
-export CLAUDE_CODE_NO_FLICKER=1
-
-
 # pnpm
 export PNPM_HOME="/Users/songzhou/Library/pnpm"
 case ":$PATH:" in
@@ -53,8 +50,18 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+
 # >>> grok installer >>>
 export PATH="$HOME/.grok/bin:$PATH"
 fpath=(~/.grok/completions/zsh $fpath)
 autoload -Uz compinit && compinit -C
 # <<< grok installer <<<
+
+export CLAUDE_CODE_NO_FLICKER=1
+export CLAUDE_CODE_MAX_CONTEXT_TOKENS=500000
+
+export ANTHROPIC_BASE_URL=http://127.0.0.1:8317
+export ANTHROPIC_AUTH_TOKEN=cli-key
+export ANTHROPIC_DEFAULT_OPUS_MODEL='grok-4.5'
+export ANTHROPIC_DEFAULT_SONNET_MODEL='grok-4.5'
+export ANTHROPIC_DEFAULT_HAIKU_MODEL='grok-4.5(low)'
