@@ -66,4 +66,5 @@ export ANTHROPIC_DEFAULT_OPUS_MODEL='grok-4.5'
 export ANTHROPIC_DEFAULT_SONNET_MODEL='grok-4.5'
 export ANTHROPIC_DEFAULT_HAIKU_MODEL='grok-4.5(low)'
 
-export https_proxy=http://127.0.0.1:7897 http_proxy=http://127.0.0.1:7897 all_proxy=socks5://127.0.0.1:7897
+export https_proxy=http://127.0.0.1:7893 http_proxy=http://127.0.0.1:7893 all_proxy=socks5://127.0.0.1:7893
+
