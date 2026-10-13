@@ -33,9 +33,6 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-# opencode
-export PATH=/Users/songzhou/.opencode/bin:$PATH
-
 # Amp CLI
 export PATH="/Users/songzhou/.amp/bin:$PATH"
 export PATH="$HOME/.npm-global/bin:$PATH"
